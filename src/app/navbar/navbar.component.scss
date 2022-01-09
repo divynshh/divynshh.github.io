@@ -1,0 +1,48 @@
+.nav-bar{
+padding-left: 200px;
+padding-right: 200px;
+height: 100px;
+background: rgba(0, 0, 0, 0.623);
+color: white;
+box-shadow: 3px 1px 12px 4px #000000;
+transition: all 0.20s;
+border-radius: 0;
+
+}
+mat-toolbar:hover {
+
+    background-color: rgba(0, 0, 0, 0.795);
+
+}
+.spacer {
+    flex: 1 1 auto;
+}
+  
+.button {
+    min-width: 200px;
+    min-height: 60px;
+    font-weight: 400;
+    font-size: large;
+}  
+
+  .title {
+    min-width: 600px;
+    min-height: 60px;
+    font-weight: 400;
+    font-size: 22px;
+    height: 100%;
+    vertical-align: middle;
+  }  
+
+  .day-night{
+      display: flex;
+      height: 100%;
+      vertical-align: middle;
+  }
+
+  .material-icons-sharp{
+      
+      font-size: 24px;
+      padding: 20px;
+      vertical-align: middle;
+  }

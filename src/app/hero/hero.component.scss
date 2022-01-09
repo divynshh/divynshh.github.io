@@ -1,0 +1,45 @@
+.hero-parent{
+    height: 90vh;
+  //  background-image: url('../../assets/images/heroBG.jpg');
+  //  background-size: 90%;
+    z-index: 1;
+    
+    
+    
+}
+
+ .image{
+
+     height: 100%;
+     background-image: url('../../assets/images/heroBG.jpg');
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     background-position-x: center;
+     background-color: rgba(109, 105, 105, 0.788);
+    background-blend-mode: multiply;
+
+    
+ }
+
+ .hero-intro{
+     display: flex;
+     color: white;
+     align-items: center;
+     justify-content: center;
+     height: 80%;
+     font-size: 64px;
+     flex-direction: column;
+    
+ }
+
+ .subtitle{
+    color: white;
+    font-size: 34px;
+
+}
+.title{
+    color: white;
+    font-size: 92px;
+    font-weight: 800;
+
+}
