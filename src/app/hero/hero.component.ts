@@ -13,4 +13,9 @@ export class HeroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openResume(){
+    window.open('../assets/docs/Resume.pdf', '_blank').focus();
+
+  }
+
 }
