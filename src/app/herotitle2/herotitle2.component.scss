@@ -20,6 +20,7 @@ body {
   border-radius: 12px;
   width: 30%;
   text-shadow: 5px 0 5px rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 #flip {
@@ -85,6 +86,7 @@ p {
     border-radius: 12px;
     
     transform: scale(0.75);
+    cursor: pointer;
   }
 
   .verticalSocialTray{

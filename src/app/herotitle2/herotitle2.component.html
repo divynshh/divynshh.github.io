@@ -1,4 +1,4 @@
-<div *ngIf="screenSize=='Large' || screenSize=='XLarge'" id=container>
+<div *ngIf="screenSize=='Large' || screenSize=='XLarge'" id=container (click)="openResume()">
     Its Me!<br>
     Divyansh
     <div id=flip>
@@ -19,7 +19,7 @@
     <app-social-tray [screenSize]='screenSize'></app-social-tray>
 
    </div>
-  <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" id=containersmall>
+  <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" id=containersmall (click)="openResume()">
     
     Its Me!<br>
     Divyansh
