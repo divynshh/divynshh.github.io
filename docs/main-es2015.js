@@ -1018,11 +1018,15 @@ __webpack_require__.r(__webpack_exports__);
 function VideoComponent_video_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "video", 2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "source", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "source", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "source", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function VideoComponent_video_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "video", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "video", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "source", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "source", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "source", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 class VideoComponent {
@@ -1032,9 +1036,9 @@ class VideoComponent {
     }
 }
 VideoComponent.ɵfac = function VideoComponent_Factory(t) { return new (t || VideoComponent)(); };
-VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VideoComponent, selectors: [["app-video"]], inputs: { screenSize: "screenSize" }, decls: 2, vars: 2, consts: [["autoplay", "", "muted", "", "loop", "", "id", "title-video", 4, "ngIf"], ["autoplay", "", "muted", "", "loop", "", "id", "title-video-lowres", 4, "ngIf"], ["autoplay", "", "muted", "", "loop", "", "id", "title-video"], ["src", "../../assets/videos/hero.mp4", "type", "video/mp4"], ["autoplay", "", "muted", "", "loop", "", "id", "title-video-lowres"]], template: function VideoComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, VideoComponent_video_0_Template, 2, 0, "video", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, VideoComponent_video_1_Template, 2, 0, "video", 1);
+VideoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VideoComponent, selectors: [["app-video"]], inputs: { screenSize: "screenSize" }, decls: 2, vars: 2, consts: [["autoplay", "", "muted", "", "loop", "", "id", "title-video", 4, "ngIf"], ["autoplay", "", "muted", "", "loop", "", "id", "title-video-lowres", 4, "ngIf"], ["autoplay", "", "muted", "", "loop", "", "id", "title-video"], ["type", "video/webm", "src", "../../assets/videos/hero.webm"], ["type", "video/mp4", "src", "../../assets/videos/hero.mp4"], ["type", "video/mp4", "src", "../../assets/videos/hero.m4v"], ["autoplay", "", "muted", "", "loop", "", "id", "title-video-lowres"]], template: function VideoComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, VideoComponent_video_0_Template, 4, 0, "video", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, VideoComponent_video_1_Template, 4, 0, "video", 1);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.screenSize == "Large" || ctx.screenSize == "XLarge" || ctx.screenSize == "Medium");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
