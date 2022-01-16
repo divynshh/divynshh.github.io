@@ -1,17 +1,34 @@
-<mat-toolbar class="nav-bar">
-    <span>
-    <mat-label class="title">   Divyansh Chauhan </mat-label> 
-    </span>
-    <span class="spacer"></span>
-    <button class="button" mat-button >About</button>
-    <button class="button" mat-button>Experience</button>
-    <button class="button" mat-button>Projects</button>
-    
-    <!-- <div class='daynight'>
-        <mat-icon class="material-icons-sharp">light_mode</mat-icon>
-        
+     <mat-drawer-container class="drawer-container">
+        <mat-drawer class="side-nav" #drawer position='end' mode='over' appOpenSidebarOnSwipe >
+            <mat-selection-list [multiple]="false">
+              <mat-list-option class="list-option" value="about">About</mat-list-option>
+              <mat-list-option class="list-option" value="experience">Experience</mat-list-option>
+              <mat-list-option class="list-option" value="projects">Projects</mat-list-option>
+            </mat-selection-list>
+        </mat-drawer>
 
-        <mat-slide-toggle></mat-slide-toggle>
-        <mat-icon class="material-icons-sharp">nightlight_round</mat-icon>
-    </div> -->
-</mat-toolbar>
+        <mat-drawer-content class='drawer-content' >
+
+
+          <mat-toolbar class='nav-bar'>    
+            <div class='toolbar-div'>
+              <span class="toolbar-title">Divyansh Chauhan</span>
+              
+              <span class="toolbar-buttons" *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'">
+                    <div ><button class="button" mat-button>About</button></div>
+                    <div><button class="button" mat-button>Experience</button></div>
+                    <div><button class="button" mat-button>Projects</button></div>      
+              </span>
+    
+              <span class="toolbar-menu">
+                <button  *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" mat-icon-button (click)="drawer.toggle()" > <mat-icon >menu </mat-icon>
+                </button>
+              </span>
+            </div>
+        </mat-toolbar>
+
+          <app-hero class="hero" [screenSize]='screenSize'></app-hero>
+          
+        </mat-drawer-content> 
+      </mat-drawer-container>    
+

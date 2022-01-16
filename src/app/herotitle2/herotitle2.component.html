@@ -1,0 +1,35 @@
+<div *ngIf="screenSize=='Large' || screenSize=='XLarge'" id=container>
+    Its Me!<br>
+    Divyansh
+    <div id=flip>
+      <div><div>Traveller</div></div>
+      <div><div>Engineer</div></div>
+      <div><div>Story Teller</div></div>
+    </div>
+    <p>I am a Software Engineer based in Gurgaon, India.<br>
+        I like to build solid & scalable applications/software solutions. <br>
+        
+    </p>
+    <app-social-tray [screenSize]='screenSize'></app-social-tray>
+  </div>
+  
+  <!-- <p>{{screenSize}}</p> -->
+
+  <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" class="verticalSocialTray">
+    <app-social-tray [screenSize]='screenSize'></app-social-tray>
+
+   </div>
+  <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" id=containersmall>
+    
+    Its Me!<br>
+    Divyansh
+    <div id=flip>
+      <div><div>Traveller</div></div>
+      <div><div>Engineer</div></div>
+      <div><div>Story Teller</div></div>
+    </div>
+    <p>Software Engineer<br *ngIf="screenSize!='Large' && screenSize!='XLarge'"> based in Gurgaon, India.<br>
+       Likes to Build solid & scalable <br *ngIf="screenSize!='Large' && screenSize!='XLarge'"> applications/software solutions.</p>
+       
+       
+  </div>

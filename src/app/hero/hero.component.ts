@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
 
 
 @Component({
@@ -8,14 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
-  constructor() { }
+  @Input() screenSize;
 
   ngOnInit(): void {
   }
 
-  openResume(){
-    window.open('../assets/docs/Resume.pdf', '_blank').focus();
-
-  }
-
+  
 }
+
+

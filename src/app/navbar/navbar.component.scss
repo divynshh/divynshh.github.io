@@ -1,12 +1,11 @@
 .nav-bar{
-padding-left: 200px;
-padding-right: 200px;
-height: 100px;
+height: 80px;
 background: rgba(0, 0, 0, 0.623);
 color: white;
 box-shadow: 3px 1px 12px 4px #000000;
 transition: all 0.20s;
 border-radius: 0;
+display: flex;
 
 }
 mat-toolbar:hover {
@@ -19,17 +18,17 @@ mat-toolbar:hover {
 }
   
 .button {
-    min-width: 200px;
-    min-height: 60px;
+    min-width: 100px;
+    min-height: 30px;
     font-weight: 400;
-    font-size: large;
+    font-size: 14px;
 }  
 
   .title {
     min-width: 600px;
     min-height: 60px;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 16px;
     height: 100%;
     vertical-align: middle;
   }  
@@ -46,3 +45,80 @@ mat-toolbar:hover {
       padding: 20px;
       vertical-align: middle;
   }
+
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+  }
+
+  .fill-remaining-space {
+    /*This fills the remaining space, by using flexbox.  
+   Every toolbar row uses a flexbox row layout. */
+   flex: 1 1 auto;
+ }
+ .drawer-container{
+   height: 100%;
+   width: 100%;
+   background-color: black;
+
+ }
+
+ .toolbar-div div{
+   display: inline-block;
+   min-width: 100px;
+   text-align: center;
+   margin-right: auto;
+ }
+
+ .toolbar-div{
+   display: flex;
+   min-width: 100%;
+   flex:1 1 0; 
+ }
+
+
+
+.side-nav{
+width: fit-content;
+background-color: #0000007a;
+margin-top: 80px;
+}
+
+.toolbar-buttons{
+  display: flex;
+  align-items: flex-end;
+}
+
+.toolbar-title{
+  
+  min-width: 70%;
+  text-align: left;
+  align-items: flex-start;
+  padding-left: 6%;
+  
+  
+}
+
+.toolbar-menu{
+
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: auto;
+  flex:1;
+}
+
+.hero{
+
+  height: 40vh;
+  width: 100%;
+  background-color: aqua;
+}
+
+.drawer-content{
+  height: 80vh;
+}
+
+.list-option {
+  color: white;
+}

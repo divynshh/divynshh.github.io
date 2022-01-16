@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  margin:0px;
+  font-family:'Roboto';
+  text-align:center;
+}
+
+#container {
+  color:rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  position:absolute;
+  left: 12%;
+  bottom:30%;
+  display:block;
+  //background-color: rgba(0, 0, 0, 0.356);
+  padding: 8px;
+  border-radius: 12px;
+  width: 30%;
+  text-shadow: 5px 0 5px rgb(0, 0, 0);
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div  {
+  color:#fff;
+  padding:2px 6px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+  text-shadow: none;
+}
+
+#flip div:first-child {
+  animation: show 6s linear infinite;
+}
+
+#flip div div {
+  background:rgba(180, 102, 0, 0.705);
+}
+#flip div:first-child div {
+  background:#3475c0ad;
+}
+#flip div:last-child div {
+  background:#b94139c2;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+p {
+  
+  width:100%;
+  
+  text-shadow: 5px 0 5px rgb(0, 0, 0);
+  font-size:14px;
+  color:rgb(255, 255, 255);
+  
+}
+
+#containersmall {
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size:36px;
+    font-weight:bold;
+    position:absolute;
+    left: 12%;
+    bottom:30%;
+    display:block;
+    //background-color: rgba(0, 0, 0, 0.356);
+    padding: 8px;
+    border-radius: 12px;
+    
+    transform: scale(0.75);
+  }
+
+  .verticalSocialTray{
+    height: fit-content;
+    position: absolute;
+    top: 30%;
+  }
