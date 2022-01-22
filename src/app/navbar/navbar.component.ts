@@ -19,4 +19,9 @@ export class NavbarComponent  {
     this.isSideNavOpen = !this.isSideNavOpen;
 
   }
+
+  scroll(el) {
+    el = document.getElementById(el);
+    el.scrollIntoView()
+}
 }

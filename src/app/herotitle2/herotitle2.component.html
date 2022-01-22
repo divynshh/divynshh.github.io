@@ -1,12 +1,13 @@
-<div *ngIf="screenSize=='Large' || screenSize=='XLarge'" id=container (click)="openResume()">
-    Its Me!<br>
-    Divyansh
+<div *ngIf="screenSize=='Large' || screenSize=='XLarge'" id=container>
+    <span style="font-size: 20px; font-weight: 500; text-transform: capitalize;">Hey! Its me,</span>
+    <br>
+    <span style="text-transform: capitalize; font-weight: 600;">Divyansh</span>
     <div id=flip>
       <div><div>Traveller</div></div>
       <div><div>Engineer</div></div>
       <div><div>Story Teller</div></div>
     </div>
-    <p>I am a Software Engineer based in Gurgaon, India.<br>
+    <p style="text-transform: none; font-weight: 500; font-size: 16px;">I am a Software Engineer based in Gurgaon, India.<br>
         I like to build solid & scalable applications/software solutions. <br>
         
     </p>
@@ -19,16 +20,17 @@
     <app-social-tray [screenSize]='screenSize'></app-social-tray>
 
    </div>
-  <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" id=containersmall (click)="openResume()">
+  <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" id=containersmall >
     
-    Its Me!<br>
-    Divyansh
+    <span style="font-size: 20px; font-weight: 500; text-transform: capitalize;">Hey! Its me,</span>
+    <br>
+    <span style="text-transform: capitalize; font-weight: 600;">Divyansh</span><br>
     <div id=flip>
       <div><div>Traveller</div></div>
       <div><div>Engineer</div></div>
       <div><div>Story Teller</div></div>
     </div>
-    <p>Software Engineer<br *ngIf="screenSize!='Large' && screenSize!='XLarge'"> based in Gurgaon, India.<br>
+    <p style="text-transform: none; font-weight: 500; font-size: 16px;">Software Engineer<br *ngIf="screenSize!='Large' && screenSize!='XLarge'"> based in Gurgaon, India.<br>
        Likes to Build solid & scalable <br *ngIf="screenSize!='Large' && screenSize!='XLarge'"> applications/software solutions.</p>
        
        

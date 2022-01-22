@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 .nav-bar{
 height: 80px;
 background: rgba(0, 0, 0, 0.623);
@@ -6,7 +10,10 @@ box-shadow: 3px 1px 12px 4px #000000;
 transition: all 0.20s;
 border-radius: 0;
 display: flex;
-
+position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+backdrop-filter: blur(2px);
 }
 mat-toolbar:hover {
 
@@ -96,6 +103,10 @@ margin-top: 80px;
   text-align: left;
   align-items: flex-start;
   padding-left: 6%;
+  font-size: medium;
+  vertical-align: bottom;
+  justify-self: center;
+  font-weight: 400;
   
   
 }
@@ -110,15 +121,53 @@ margin-top: 80px;
 
 .hero{
 
-  height: 40vh;
+  height: 80vh;
   width: 100%;
   background-color: aqua;
 }
 
 .drawer-content{
-  height: 80vh;
+  height: 100%;
 }
 
 .list-option {
   color: white;
+  height: 120px;
+  font-size: large;
+  padding: 8px;
+  margin: 8px;
 }
+
+.about{
+width: 100%;
+max-width: 100%;
+position:absolute;
+top:80vh;
+z-index: -1;
+}
+
+.body{
+  height: 100%;
+}
+
+
+.experience{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  position:absolute;
+  top:190vh;
+  z-index: -1;
+  margin-bottom: 20vh;
+  
+  }
+
+  .experience-lowres{
+    width: 100%;
+    max-width: 100%;
+    position:absolute;
+    top:230vh;
+    z-index: -1;
+    
+    
+    }

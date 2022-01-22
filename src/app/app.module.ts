@@ -17,6 +17,12 @@ import { MatListModule } from '@angular/material/list';
 import { VideoComponent } from './video/video.component';
 import { Herotitle2Component } from './herotitle2/herotitle2.component';
 import { SocialTrayComponent } from './social-tray/social-tray.component';
+import { AboutComponent } from './about/about.component';
+import { SkillScaleComponent } from './skill-scale/skill-scale.component';
+import { SkillsetComponent } from './skillset/skillset.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,13 @@ import { SocialTrayComponent } from './social-tray/social-tray.component';
     HerotitleComponent,
     VideoComponent,
     Herotitle2Component,
-    SocialTrayComponent
+    SocialTrayComponent,
+    AboutComponent,
+    SkillScaleComponent,
+    SkillsetComponent,
+    ExperienceComponent,
+    ProjectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

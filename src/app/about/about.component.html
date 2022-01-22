@@ -1,0 +1,71 @@
+<div class="body">
+    
+    <div *ngIf="screenSize=='Large' || screenSize=='XLarge'" class="table-div">
+        <div class="header">About</div>
+        <table style="height: 60vh; width: 100%;">
+            <tr style="display: flex;">
+                <td style="margin-top: 8%;">
+                    <div class="image-title"> 
+                        Who's this guy?
+                        
+                    </div>
+                    <div class="image-div">
+                        <img class="image" src="../../assets/images/about.jpg" alt="Me">
+                        
+                    </div>
+                   
+                    <div class="subtitle"><br>
+                        I am a Software Engineer at UnitedHealth Group in Hyderabad, IN.<br>
+                        I love solving problems.                        
+                    </div>
+                </td>
+                <td >
+                    <div class="skill-div">
+                        <div class="image-title">Skills</div>
+                    </div>
+                    <div>
+                        <br>
+                        <app-skillset></app-skillset>
+                    </div>
+ 
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" class="table-div-lowres">
+        <div class="header-lowres">About</div>
+        <table style="height: 100%; width: 100%;">
+            <tr >
+                <td  >
+                    <div class="image-title"> 
+                        Who's this guy?
+                        
+                    </div>
+                    <div class="image-div-lowres">
+                        <img class="image-lowres" src="../../assets/images/about.jpg" alt="Me">
+                        
+                    </div>
+
+                    <div class="subtitle"><br>
+                        I am a Software Engineer at UnitedHealth Group in Hyderabad, IN.<br>
+                        I love solving problems.                        
+                    </div>
+                </td>
+                
+            </tr>
+            <br>
+            <tr style="margin-top: 8%;">
+                <td>
+                    <div class="skill-div">
+                        <div class="image-title">Skills</div>
+                    </div>
+                    <br>
+                    <app-skillset></app-skillset>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
