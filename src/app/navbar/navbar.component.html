@@ -2,9 +2,10 @@
 <mat-drawer-container class="drawer-container">
         <mat-drawer class="side-nav" #drawer position='end' mode='over' appOpenSidebarOnSwipe >
             <mat-selection-list [multiple]="false">
-              <mat-list-option class="list-option" value="about">About</mat-list-option>
-              <mat-list-option class="list-option" value="experience">Experience</mat-list-option>
-              <mat-list-option class="list-option" value="projects">Projects</mat-list-option>
+              <mat-list-option (click)="scroll('about')" class="list-option" value="about">About</mat-list-option>
+              <mat-list-option (click)="scroll('experience')" class="list-option" value="experience">Experience</mat-list-option>
+              <mat-list-option (click)="scroll('projects')" class="list-option" value="projects">Projects</mat-list-option>
+              <mat-list-option (click)="scroll('getInTouch')" class="list-option" value="projects">Get In Touch</mat-list-option>
             </mat-selection-list>
         </mat-drawer>
 
@@ -18,7 +19,8 @@
               <span class="toolbar-buttons" *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'">
                     <div ><button (click)="scroll('about')" class="button" mat-button>About</button></div>
                     <div><button (click)="scroll('experience')"  class="button" mat-button>Experience</button></div>
-                    <div><button  class="button" mat-button>Projects</button></div>      
+                    <div><button (click)="scroll('projects')" class="button" mat-button>Projects</button></div>      
+                    <div><button (click)="scroll('getInTouch')"  class="button" mat-button>Get In Touch</button></div>
               </span>
     
               <span class="toolbar-menu">
@@ -32,6 +34,16 @@
           <app-about id="about" class="about" [screenSize]='screenSize'></app-about>
           <app-experience *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="experience" class="experience-lowres" [screenSize]='screenSize'></app-experience>
           <app-experience *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="experience" class="experience" [screenSize]='screenSize'></app-experience>
+
+          <app-projects *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="projects" class="projects-lowres" [screenSize]='screenSize' [projectList]='projectList'></app-projects>
+          <app-projects *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="projects" class="projects" [screenSize]='screenSize' [projectList]='projectList'></app-projects>
+
+          <app-get-in-touch *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="getInTouch" class="getInTouch-lowres" [screenSize]='screenSize' ></app-get-in-touch>
+          <app-get-in-touch *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="getInTouch" class="getInTouch" [screenSize]='screenSize' ></app-get-in-touch>
+          
+          <app-footer *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="footer" class="footer-lowres" ></app-footer>
+          <app-footer *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="footer" class="footer"  ></app-footer>
+          <!-- <iframe src="https://onedrive.live.com/embed?cid=0D280DB1B697C9C4&resid=D280DB1B697C9C4%21830&authkey=APp3P6z40XsyCZ8&em=2" width="476" height="288" frameborder="0" scrolling="no"></iframe> -->
         </mat-drawer-content> 
         
       </mat-drawer-container>    

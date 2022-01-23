@@ -1,1 +1,61 @@
-<p>projects works!</p>
+<div class="body">
+    <div *ngIf="screenSize=='Large' || screenSize=='XLarge'" class="table-div">
+        <div class="header">Projects</div>
+
+        <div class=project-list>
+
+            <span *ngFor='let i of projectList'>
+                <app-projectcard 
+                [screenSize]='screenSize'
+                [title]="i.title"
+                [image]="i.image" 
+                [details]="i.details"
+                [techStack]="i.techStack"
+                [link]="i.link">
+
+            </app-projectcard>
+            </span>
+            
+
+        </div>
+        <div class="subtitle-text">
+            For more details on corporate projects.
+        </div>
+        <div class="subtitle">
+            
+            <button (click)="viewResume()" mat-button style="color: black; background-color: white;" >Download Resume</button>
+        </div>
+
+    </div>
+
+    <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" class="table-div">
+        <div class="header-lowres">Projects</div>
+        
+        <div class=project-list-lowres>
+
+            <span *ngFor='let i of projectList'>
+                <app-projectcard 
+                [screenSize]='screenSize'
+                [title]="i.title"
+                [image]="i.image" 
+                [details]="i.details"
+                [techStack]="i.techStack"
+                [link]="i.link"
+                >
+
+            </app-projectcard>
+            </span>
+            
+        </div>
+        <div class="subtitle-text">
+            For more details on corporate projects.
+        </div>
+        <div class="subtitle">
+            
+            <button (click)="viewResume()" mat-button style="color: black; background-color: white;" >Download Resume</button>
+        </div>
+    </div>
+
+
+
+</div>

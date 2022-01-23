@@ -1,0 +1,58 @@
+<mat-card  *ngIf="screenSize=='Large' || screenSize=='XLarge'" class="example-card" (click)="navigate(link)">
+    <img mat-card-image src={{image}}>
+    <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    
+    <mat-card-content style="margin-left: 15px;">
+      <p >
+        {{details}}
+      </p>
+
+
+      
+    </mat-card-content>
+
+    
+
+    <mat-card-footer>
+      
+    <span class="techStack">
+      <span  *ngFor='let i of techStack' class="stackLabel">
+        {{i}}
+      </span>
+  </span>
+</mat-card-footer>
+
+  </mat-card>
+
+
+  <mat-card  *ngIf="screenSize!='Large' && screenSize!='XLarge'" class="example-card-lowres" (click)="navigate(link)">
+    <img mat-card-image src={{image}}>
+    <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    
+    <mat-card-content style="margin-left: 15px;">
+      <p >
+        {{details}}
+      </p>
+
+
+      
+    </mat-card-content>
+
+    
+
+    <mat-card-footer>
+      
+    <span class="techStack">
+      <span  *ngFor='let i of techStack' class="stackLabel">
+        {{i}}
+      </span>
+  </span>
+</mat-card-footer>
+
+  </mat-card>

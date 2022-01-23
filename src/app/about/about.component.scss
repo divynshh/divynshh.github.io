@@ -59,11 +59,25 @@
 }
 
 
-.image{
+.image-top{
     height: 60%;
     width: 60%;
     padding: 20px;
+
     
+}
+
+.image-bottom{
+    height: 60%;
+    width: 60%;
+    padding: 20px;
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    position: absolute;
+    transform: scale(43%,74%);
     
 }
 
@@ -98,7 +112,7 @@
 }
 
 table, td {
-    border: 1px solid black;
+    border: none;
   }
 
   td{
@@ -131,6 +145,28 @@ table, td {
     
 }
 
+.image-lowres-top{
+    height: 90%;
+    width: 90%;
+    padding: 10px;
+
+    
+}
+
+.image-lowres-bottom{
+    height: 90%;
+    width: 90%;
+    padding: 10px;
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    position: absolute;
+    transform: scale(88%,24%);
+    
+}
+
 .header-lowres{
     margin:0px;
     letter-spacing: 10px;
@@ -160,3 +196,17 @@ display: flex;
     
     }
 
+    @keyframes fade {
+        0% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 1;
+        }
+        75% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }

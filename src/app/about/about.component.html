@@ -9,14 +9,24 @@
                         Who's this guy?
                         
                     </div>
-                    <div class="image-div">
-                        <img class="image" src="../../assets/images/about.jpg" alt="Me">
-                        
-                    </div>
+                    <span >
+                        <div *ngIf="animateImage==true" id="imageDivAnimate" #imageDivAnimate class="image-div">
+                            <img class="image-top" src="../../assets/images/about.jpg" alt="Me">
+                            <img class="image-bottom" src="../../assets/images/scientist-myself.gif" alt="Me">
+                        </div>
                    
+
+                    <div *ngIf = "animateImage==false"  class="image-div">
+                        <img class="image-top" src="../../assets/images/about.jpg" alt="Me">
+                    </div>
+                </span>
                     <div class="subtitle"><br>
                         I am a Software Engineer at UnitedHealth Group in Hyderabad, IN.<br>
                         I love solving problems.                        
+                    </div>
+                    <br>
+                    <div class="subtitle">
+                        <button (click)="viewResume()" mat-button style="color: black; background-color: white;" >Download Resume</button>
                     </div>
                 </td>
                 <td >
@@ -42,14 +52,29 @@
                         Who's this guy?
                         
                     </div>
-                    <div class="image-div-lowres">
+                    <!-- <div class="image-div-lowres">
                         <img class="image-lowres" src="../../assets/images/about.jpg" alt="Me">
                         
+                    </div> -->
+                    <span >
+                        <div *ngIf="animateImage==true" id="imageDivAnimate" #imageDivAnimate class="image-div-lowres">
+                            <img class="image-lowres-top" src="../../assets/images/about.jpg" alt="Me">
+                            <img class="image-lowres-bottom" src="../../assets/images/scientist-myself.gif" alt="Me">
+                        </div>
+                   
+
+                    <div *ngIf = "animateImage==false"  class="image-div-lowres">
+                        <img class="image-lowres-top" src="../../assets/images/about.jpg" alt="Me">
                     </div>
+                </span>
 
                     <div class="subtitle"><br>
                         I am a Software Engineer at UnitedHealth Group in Hyderabad, IN.<br>
                         I love solving problems.                        
+                    </div>
+                    <br>
+                    <div class="subtitle">
+                        <button (click)="viewResume()" mat-button style="color: black; background-color: white; transform: scale(80%);" >Download Resume</button>
                     </div>
                 </td>
                 

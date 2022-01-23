@@ -13,13 +13,13 @@ display: flex;
 position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-backdrop-filter: blur(2px);
+backdrop-filter: blur(1px);
 }
-mat-toolbar:hover {
+// mat-toolbar:hover {
 
-    background-color: rgba(0, 0, 0, 0.795);
+//     background-color: rgba(0, 0, 0, 0.795);
 
-}
+// }
 .spacer {
     flex: 1 1 auto;
 }
@@ -94,12 +94,12 @@ margin-top: 80px;
 
 .toolbar-buttons{
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .toolbar-title{
   
-  min-width: 70%;
+  min-width: 60%;
   text-align: left;
   align-items: flex-start;
   padding-left: 6%;
@@ -156,7 +156,7 @@ z-index: -1;
   height: 100%;
   max-width: 100%;
   position:absolute;
-  top:190vh;
+  top:200vh;
   z-index: -1;
   margin-bottom: 20vh;
   
@@ -166,8 +166,69 @@ z-index: -1;
     width: 100%;
     max-width: 100%;
     position:absolute;
-    top:230vh;
+    top:240vh;
     z-index: -1;
     
     
     }
+
+    .projects{
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      position:absolute;
+      top:300vh;
+      z-index: -1;
+      margin-bottom: 20vh;
+      
+      }
+    
+.projects-lowres{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        position:absolute;
+        top:390vh;
+        z-index: -1;
+        
+        
+}
+.getInTouch-lowres{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position:absolute;
+  top:570vh;
+  z-index: -1;
+}
+
+.getInTouch{
+
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  position:absolute;
+  top:400vh;
+  z-index: -1;
+  
+}
+
+.footer-lowres{
+  width: 100%;
+  max-width: 100%;
+  height: 20vh;
+  position:absolute;
+  top:660vh;
+  z-index: -1;
+}
+
+.footer{
+
+  width: 100%;
+  height: 17vh;
+  max-width: 100%;
+  position:absolute;
+  top:490vh;
+  z-index: -1;
+  
+}

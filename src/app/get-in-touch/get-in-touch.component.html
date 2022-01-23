@@ -1,0 +1,22 @@
+<div class="body">
+    <div *ngIf="screenSize=='Large' || screenSize=='XLarge'" class="table-div">
+        <div class="header">Get in Touch</div>
+        <div class="sub-header">For business inquiries,
+            Just drop a message below ! 😃</div>
+            <app-contact-form [screenSize]='screenSize'></app-contact-form>
+
+    </div>
+
+    <div *ngIf="screenSize!='Large' && screenSize!='XLarge'" class="table-div-lowres">
+        <div class="header-lowres">Get in Touch</div>
+        <div class="sub-header-lowres">For business inquiries,
+            Just drop a message below ! 😃</div>
+
+            <app-contact-form [screenSize]='screenSize'></app-contact-form>
+
+           
+    </div>
+
+
+
+</div>

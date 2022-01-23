@@ -23,6 +23,9 @@ import { SkillsetComponent } from './skillset/skillset.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectcardComponent } from './projectcard/projectcard.component';
+import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { FooterComponent } from './footer/footer.component';
     SkillsetComponent,
     ExperienceComponent,
     ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectcardComponent,
+    GetInTouchComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

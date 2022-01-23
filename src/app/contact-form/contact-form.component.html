@@ -1,0 +1,14 @@
+<form class="form-big" *ngIf="screenSize=='Large' || screenSize=='XLarge'">      
+    <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+    <input type="submit" value="SUBMIT"/>
+  </form>
+
+
+  <form class="form-lowres" *ngIf="screenSize!='Large' && screenSize!='XLarge'">      
+    <input name="name" type="text" class="feedback-input-low" placeholder="Name" />   
+    <input name="email" type="text" class="feedback-input-low" placeholder="Email" />
+    <textarea name="text" class="feedback-input-low" placeholder="Comment"></textarea>
+    <input type="submit" value="SUBMIT"/>
+  </form>

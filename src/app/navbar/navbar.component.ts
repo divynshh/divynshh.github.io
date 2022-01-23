@@ -1,7 +1,7 @@
 import { Component,Input } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import projects from '../../assets/projects.json'
+import { ProjectsDTO } from '../projects/projectsDTO';
 
 @Component({
   selector: 'app-navbar',
@@ -12,8 +12,14 @@ export class NavbarComponent  {
 
   isSideNavOpen = false;
   @Input() screenSize;
+  projectList : ProjectsDTO[];
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) {
+
+      this.projectList = projects;
+
+
+  }
 
   toggleSideNav(){
     this.isSideNavOpen = !this.isSideNavOpen;
