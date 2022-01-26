@@ -1,6 +1,7 @@
 .body{
     background-color: rgb(0, 0, 0);
-    height: 100%;
+    height: fit-content;
+    padding-bottom: 10vh;
 }
 
 
@@ -59,6 +60,19 @@
     margin-right: 5%;
     margin-top:5%;
     max-width: 100%;
+}
+
+.project-list-lowres{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top:5%;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 button:hover{

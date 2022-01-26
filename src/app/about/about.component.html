@@ -10,13 +10,13 @@
                         
                     </div>
                     <span >
-                        <div *ngIf="animateImage==true" id="imageDivAnimate" #imageDivAnimate class="image-div">
+                        <!-- <div *ngIf="animateImage==true" id="imageDivAnimate" #imageDivAnimate class="image-div">
                             <img class="image-top" src="../../assets/images/about.jpg" alt="Me">
                             <img class="image-bottom" src="../../assets/images/scientist-myself.gif" alt="Me">
-                        </div>
+                        </div> -->
                    
 
-                    <div *ngIf = "animateImage==false"  class="image-div">
+                    <div  class="image-div">
                         <img class="image-top" src="../../assets/images/about.jpg" alt="Me">
                     </div>
                 </span>
@@ -35,7 +35,8 @@
                     </div>
                     <div>
                         <br>
-                        <app-skillset></app-skillset>
+                        <app-skillset [skillSet]="'techSkills'"></app-skillset>
+                        <app-skillset [skillSet]="'otherSkills'"></app-skillset>
                     </div>
  
                 </td>
@@ -52,18 +53,15 @@
                         Who's this guy?
                         
                     </div>
-                    <!-- <div class="image-div-lowres">
-                        <img class="image-lowres" src="../../assets/images/about.jpg" alt="Me">
-                        
-                    </div> -->
+
                     <span >
-                        <div *ngIf="animateImage==true" id="imageDivAnimate" #imageDivAnimate class="image-div-lowres">
+                        <!-- <div *ngIf="animateImage==true" id="imageDivAnimate" #imageDivAnimate class="image-div-lowres">
                             <img class="image-lowres-top" src="../../assets/images/about.jpg" alt="Me">
                             <img class="image-lowres-bottom" src="../../assets/images/scientist-myself.gif" alt="Me">
-                        </div>
+                        </div> -->
                    
 
-                    <div *ngIf = "animateImage==false"  class="image-div-lowres">
+                    <div class="image-div-lowres">
                         <img class="image-lowres-top" src="../../assets/images/about.jpg" alt="Me">
                     </div>
                 </span>
@@ -86,7 +84,8 @@
                         <div class="image-title">Skills</div>
                     </div>
                     <br>
-                    <app-skillset></app-skillset>
+                    <app-skillset [skillSet]="'techSkills'"></app-skillset>
+                    <app-skillset [skillSet]="'otherSkills'"></app-skillset>
 
                 </td>
             </tr>

@@ -10,6 +10,7 @@ export class VideoComponent implements OnInit {
   constructor() { }
   @Input() screenSize;
   ngOnInit(): void {
+    
   }
 
 }

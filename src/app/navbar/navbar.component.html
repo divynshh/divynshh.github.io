@@ -31,7 +31,9 @@
         </mat-toolbar>
 
           <app-hero #hero class="hero" [screenSize]='screenSize'></app-hero>
-          <app-about id="about" class="about" [screenSize]='screenSize'></app-about>
+          <!-- <app-about id="about" class="about" [screenSize]='screenSize'></app-about> -->
+          <app-about *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="about" class="about-lowres" [screenSize]='screenSize'></app-about>
+          <app-about *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="about" class="about" [screenSize]='screenSize'></app-about>
           <app-experience *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="experience" class="experience-lowres" [screenSize]='screenSize'></app-experience>
           <app-experience *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="experience" class="experience" [screenSize]='screenSize'></app-experience>
 

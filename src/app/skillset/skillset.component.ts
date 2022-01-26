@@ -9,7 +9,10 @@ export class SkillsetComponent implements OnInit {
 
   constructor() { }
   @Input() screenSize;
+
+  @Input() skillSet;
   ngOnInit(): void {
+    console.log("skill set " + this.skillSet);
   }
 
 }

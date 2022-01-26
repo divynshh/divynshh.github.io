@@ -10,7 +10,7 @@
 
 .example-card:hover{
 
-    border-radius: 0px;
+    border-radius: 4px;
     cursor: pointer;
     transform: scale(1.05);
     box-shadow: 1px 1px 12px 1px #ffffffa6;;
@@ -21,8 +21,7 @@
     //max-height: 400px;
     height: fit-content;
     border-radius: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+
     transition: transform .2s; /* Animation */
     transform: scale(80%);
 }
