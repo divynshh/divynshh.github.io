@@ -4338,7 +4338,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       },
       decls: 2,
       vars: 2,
-      consts: [["preload", "auto", "loop", "", "id", "title-video", 3, "autoplay", "muted", 4, "ngIf"], ["loop", "", "id", "title-video-lowres", 3, "autoplay", "muted", 4, "ngIf"], ["preload", "auto", "loop", "", "id", "title-video", 3, "autoplay", "muted"], ["type", "video/mp4", "src", "../../assets/videos/hero_big.mp4"], ["type", "video/webm", "src", "../../assets/videos/hero_big.webm"], ["type", "video/mp4", "src", "../../assets/videos/hero_big.m4v"], ["loop", "", "id", "title-video-lowres", 3, "autoplay", "muted"]],
+      consts: [["preload", "auto", "loop", "", "id", "title-video", 3, "autoplay", "muted", 4, "ngIf"], ["loop", "", "id", "title-video-lowres", 3, "autoplay", "muted", 4, "ngIf"], ["preload", "auto", "loop", "", "id", "title-video", 3, "autoplay", "muted"], ["type", "video/mp4", "src", "../../assets/videos/hero.mp4"], ["type", "video/webm", "src", "../../assets/videos/hero.webm"], ["type", "video/mp4", "src", "../../assets/videos/hero.m4v"], ["loop", "", "id", "title-video-lowres", 3, "autoplay", "muted"]],
       template: function VideoComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, VideoComponent_video_0_Template, 4, 2, "video", 0);
