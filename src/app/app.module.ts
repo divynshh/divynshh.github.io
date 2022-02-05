@@ -26,6 +26,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ProjectcardComponent } from './projectcard/projectcard.component';
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactService } from './contact.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResumeViewerComponent } from './resume-viewer/resume-viewer.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     FooterComponent,
     ProjectcardComponent,
     GetInTouchComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    ResumeViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -56,9 +61,11 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+    FormsModule, ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import projects from '../../assets/projects.json'
+import { ResumeViewerComponent } from '../resume-viewer/resume-viewer.component';
 import { ProjectsDTO } from './projectsDTO';
 
 @Component({
@@ -9,9 +11,10 @@ import { ProjectsDTO } from './projectsDTO';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
   @Input() screenSize;
   @Input() projectList: ProjectsDTO[];
+  
   
   
 
@@ -23,9 +26,26 @@ export class ProjectsComponent implements OnInit {
   }
   viewResume(){
     console.log("Resume");
-    this.openFile();
+    this.openDialog();
+    //this.openFile();
    }
    openFile() {
      window.open("../../assets/docs/Resume.pdf");
  }
+
+ openDialog(): void {
+  const dialogRef = this.dialog.open(ResumeViewerComponent, {
+    width: '95%',
+    height: '90%',
+    backdropClass : 'backDrop',
+    panelClass: 'dialog-custom' 
+    
+    
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+    
+  });
+}
 }

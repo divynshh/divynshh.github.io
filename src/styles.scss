@@ -46,3 +46,15 @@ $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
 $dark-warn:    mat-palette($mat-deep-orange);
 $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
+.backDrop {
+    /* your css needs */
+    
+    background-color: #1414148f;
+    backdrop-filter: blur(2px);
+  }
+
+  
+::ng-deep .mat-dialog-container {
+  overflow: hidden !important;
+  background: #0000009d;
+}

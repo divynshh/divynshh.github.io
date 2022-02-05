@@ -1,14 +1,16 @@
-<form class="form-big" *ngIf="screenSize=='Large' || screenSize=='XLarge'">      
-    <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-    <input name="email" type="text" class="feedback-input" placeholder="Email" />
-    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-    <input type="submit" value="SUBMIT"/>
+<form [formGroup]="FormData" class="form-big" *ngIf="screenSize=='Large' || screenSize=='XLarge'" (ngSubmit)="onSubmit(FormData.value)">      
+    <input formControlName="fullname" name="name" type="text" class="feedback-input" placeholder="Name" />   
+    <input formControlName="email" name="email" type="text" class="feedback-input" placeholder="Email" />
+    <textarea formControlName="comment" name="text" class="feedback-input" placeholder="Comment"></textarea>
+    <!-- <input type="submit" value="SUBMIT"/> -->
+    <button type="submit" [disabled]="!FormData.valid" mat-raised-button>Submit</button>
   </form>
 
 
-  <form class="form-lowres" *ngIf="screenSize!='Large' && screenSize!='XLarge'">      
-    <input name="name" type="text" class="feedback-input-low" placeholder="Name" />   
-    <input name="email" type="text" class="feedback-input-low" placeholder="Email" />
-    <textarea name="text" class="feedback-input-low" placeholder="Comment"></textarea>
-    <input type="submit" value="SUBMIT"/>
+  <form [formGroup]="FormData" class="form-lowres" *ngIf="screenSize!='Large' && screenSize!='XLarge'" (ngSubmit)="onSubmit(FormData.value)">      
+    <input formControlName="fullname" name="name" type="text" class="feedback-input-low" placeholder="Name" />   
+    <input formControlName="email" name="email" type="text" class="feedback-input-low" placeholder="Email" />
+    <textarea formControlName="comment" name="text" class="feedback-input-low" placeholder="Comment"></textarea>
+    <!-- <input type="submit" [disabled]="!FormData.valid" value="SUBMIT"/> -->
+    <button type="submit" [disabled]="!FormData.valid" mat-raised-button>Submit</button>
   </form>

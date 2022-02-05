@@ -105,9 +105,11 @@ margin-top: 80px;
   align-items: flex-start;
   padding-left: 6%;
   font-size: medium;
-  vertical-align: bottom;
-  justify-self: center;
   font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+
   
   
 }
@@ -220,6 +222,27 @@ z-index: -1;
   
 }
 
+.resume-lowres{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position:relative;
+  z-index: 1;
+}
+
+.resume{
+
+  width: 100%;
+  height: fit-content;
+  min-height: 40vh;
+  max-width: 100%;
+  display: flex;
+  position:relative;
+  z-index: 1;
+  justify-content: center;
+  
+}
+
 .footer-lowres{
   width: 100%;
   max-width: 100%;
@@ -236,4 +259,9 @@ z-index: -1;
   position:relative;
   z-index: -1;
   
+}
+
+.backDrop{
+
+  background-color: #00f;
 }
