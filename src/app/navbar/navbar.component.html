@@ -2,10 +2,17 @@
 <mat-drawer-container class="drawer-container">
         <mat-drawer class="side-nav" #drawer position='end' mode='over' appOpenSidebarOnSwipe >
             <mat-selection-list [multiple]="false">
+              <span *ngIf="!isBlog">
               <mat-list-option (click)="scroll('about')" class="list-option" value="about">About</mat-list-option>
               <mat-list-option (click)="scroll('experience')" class="list-option" value="experience">Experience</mat-list-option>
               <mat-list-option (click)="scroll('projects')" class="list-option" value="projects">Projects</mat-list-option>
               <mat-list-option (click)="scroll('getInTouch')" class="list-option" value="projects">Get In Touch</mat-list-option>
+              <mat-list-option (click)="goToBlog()" class="list-option" value="Blog">Blog</mat-list-option>
+            </span>
+            <span *ngIf="isBlog">
+              <mat-list-option (click)="goToBlog()" class="list-option" value="about">Home</mat-list-option>
+
+            </span>
             </mat-selection-list>
         </mat-drawer>
 
@@ -16,13 +23,17 @@
             <div class='toolbar-div'>
               <span class="toolbar-title">Divyansh Chauhan</span>
               
-              <span class="toolbar-buttons" *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'">
-                    <div ><button (click)="scroll('about')" class="button" mat-button>About</button></div>
-                    <div><button (click)="scroll('experience')"  class="button" mat-button>Experience</button></div>
-                    <div><button (click)="scroll('projects')" class="button" mat-button>Projects</button></div>      
-                    <div><button (click)="scroll('getInTouch')"  class="button" mat-button>Get In Touch</button></div>
+                <span class="toolbar-buttons" *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'">
+                    <div ><button *ngIf="!isBlog" (click)="scroll('about')" class="button" mat-button>About</button></div>
+                    <div><button *ngIf="!isBlog" (click)="scroll('experience')"  class="button" mat-button>Experience</button></div>
+                    <div><button *ngIf="!isBlog" (click)="scroll('projects')" class="button" mat-button>Projects</button></div>      
+                    <div><button *ngIf="!isBlog" (click)="scroll('getInTouch')"  class="button" mat-button>Get In Touch</button></div>
+                    <div><button *ngIf="!isBlog" (click)="goToBlog()" class="button" mat-button>Blog</button></div>
+
+                    <div><button *ngIf="isBlog" (click)="goToBlog()" class="button" mat-button>Home</button></div>
                     <!-- <div><button (click)="openDialog()"  class="button" mat-button>Touch</button></div> -->
-              </span>
+                </span>
+              
     
               <span class="toolbar-menu">
                 <button  *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" mat-icon-button (click)="drawer.toggle()" > <mat-icon >menu </mat-icon>
@@ -30,23 +41,30 @@
               </span>
             </div>
         </mat-toolbar>
+        
 
-          <app-hero #hero class="hero" [screenSize]='screenSize'></app-hero>
-          <!-- <app-about id="about" class="about" [screenSize]='screenSize'></app-about> -->
-          <app-about *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="about" class="about-lowres" [screenSize]='screenSize'></app-about>
-          <app-about *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="about" class="about" [screenSize]='screenSize'></app-about>
-          <app-experience *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="experience" class="experience-lowres" [screenSize]='screenSize'></app-experience>
-          <app-experience *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="experience" class="experience" [screenSize]='screenSize'></app-experience>
+            <app-hero *ngIf="!isBlog" #hero class="hero" [screenSize]='screenSize'></app-hero>
+          <div *ngIf="!isBlog" [@slideInOut] > 
+            <app-about *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="about" class="about-lowres" [screenSize]='screenSize'></app-about>
+            <app-about *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="about" class="about" [screenSize]='screenSize'></app-about>
+            
+            <app-experience *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="experience" class="experience-lowres" [screenSize]='screenSize'></app-experience>
+            <app-experience *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="experience" class="experience" [screenSize]='screenSize'></app-experience>
 
-          <app-projects *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="projects" class="projects-lowres" [screenSize]='screenSize' [projectList]='projectList'></app-projects>
-          <app-projects *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="projects" class="projects" [screenSize]='screenSize' [projectList]='projectList'></app-projects>
+            <app-projects *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="projects" class="projects-lowres" [screenSize]='screenSize' [projectList]='projectList'></app-projects>
+            <app-projects *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="projects" class="projects" [screenSize]='screenSize' [projectList]='projectList'></app-projects>
 
-          <app-get-in-touch *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="getInTouch" class="getInTouch-lowres" [screenSize]='screenSize' ></app-get-in-touch>
-          <app-get-in-touch *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="getInTouch" class="getInTouch" [screenSize]='screenSize' ></app-get-in-touch>
+            <app-get-in-touch *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="getInTouch" class="getInTouch-lowres" [screenSize]='screenSize' ></app-get-in-touch>
+            <app-get-in-touch *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="getInTouch" class="getInTouch" [screenSize]='screenSize' ></app-get-in-touch>
           
-          <app-footer *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="footer" class="footer-lowres" ></app-footer>
-          <app-footer *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="footer" class="footer"  ></app-footer>
-          <!-- <iframe src="https://onedrive.live.com/embed?cid=0D280DB1B697C9C4&resid=D280DB1B697C9C4%21830&authkey=APp3P6z40XsyCZ8&em=2" width="476" height="288" frameborder="0" scrolling="no"></iframe> -->
+            <app-footer *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" id="footer" class="footer-lowres" ></app-footer>
+            <app-footer *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" id="footer" class="footer"  ></app-footer>
+          </div>
+
+        <span *ngIf="isBlog">
+          <app-blog [screenSize]='screenSize'></app-blog>
+        </span>
+
         </mat-drawer-content> 
         
       </mat-drawer-container>    

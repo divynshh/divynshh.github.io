@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './contact.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResumeViewerComponent } from './resume-viewer/resume-viewer.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ResumeViewerComponent } from './resume-viewer/resume-viewer.component';
     ProjectcardComponent,
     GetInTouchComponent,
     ContactFormComponent,
-    ResumeViewerComponent
+    ResumeViewerComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

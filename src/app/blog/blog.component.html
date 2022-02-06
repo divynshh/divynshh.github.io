@@ -1,0 +1,24 @@
+
+
+<div *ngIf="screenSize!='Large' && screenSize!='XLarge' && screenSize!='Medium'" class= 'container'>
+    <div class="container_content">
+        <div class="container_content_inner">
+            <div class="title"><h1 class="h1-lowres">Here lies my blog</h1>
+            </div>
+            <div class="par"><p class="p-lowres">...is what this page might say some day.</p></div>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="screenSize=='Large' || screenSize=='XLarge' || screenSize=='Medium'" class= 'container'>
+    <div class="container_content">
+        <div class="container_content_inner">
+            <div class="title"><h1>Here lies my blog</h1>
+            </div>
+            <div class="par"><p >...is what this page might say some day.</p></div>
+        </div>
+    </div>
+
+</div>
+    

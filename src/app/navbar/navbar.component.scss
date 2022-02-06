@@ -1,5 +1,6 @@
 html{
   scroll-behavior: smooth;
+  
 }
 
 .nav-bar{
@@ -100,7 +101,7 @@ margin-top: 80px;
 
 .toolbar-title{
   
-  min-width: 60%;
+  min-width: 50%;
   text-align: left;
   align-items: flex-start;
   padding-left: 6%;
@@ -128,6 +129,7 @@ margin-top: 80px;
   width: 100%;
   background-color: aqua; 
   z-index: -1;
+  
 }
 
 .drawer-content{
@@ -153,6 +155,7 @@ z-index: -1;
 
 .body{
   height: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -264,4 +267,9 @@ z-index: -1;
 .backDrop{
 
   background-color: #00f;
+}
+
+.portfolio-components{
+  animation: expand .8s ease forwards;
+  transition: all .8s ease;
 }
